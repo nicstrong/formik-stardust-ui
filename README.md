@@ -9,4 +9,4 @@ Wrappers exist so far for:
 
   * [Input](https://stardust-ui.github.io/react/components/input) - FormikInputFormField 
   * [Checkbox](https://stardust-ui.github.io/react/components/checkbox) - FormikCheckboxFormField 
-  * [Dropdown](https://stardust-ui.github.io/react/components/ropdown) - FormikDropdownFormField 
+  * [Dropdown](https://stardust-ui.github.io/react/components/dropdown) - FormikDropdownFormField 
