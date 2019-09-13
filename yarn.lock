@@ -610,8 +610,8 @@
     semver "^5.5.0"
 
 "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.5":
-  version "7.5.5"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.0.tgz#4fc1d642a9fd0299754e8b5de62c631cf5568205"
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -810,106 +810,65 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^12.0.9"
 
-"@stardust-ui/fela-bindings@^10.6.2":
-  version "10.6.2"
-  resolved "https://registry.yarnpkg.com/@stardust-ui/fela-bindings/-/fela-bindings-10.6.2.tgz#eb16bcf4492bbe8cf84e54819f10f231ed79e260"
-  dependencies:
-    "@stardust-ui/fela-dom" "^10.6.2"
-    "@stardust-ui/fela-tools" "^10.6.2"
-    fast-loops "^1.0.0"
-    react-addons-shallow-compare "^15.6.2"
-    shallow-equal "^1.0.0"
+"@reach/auto-id@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.2.0.tgz#97f9e48fe736aa5c6f4f32cf73c1f19d005f8550"
 
-"@stardust-ui/fela-dom@^10.6.2":
-  version "10.6.2"
-  resolved "https://registry.yarnpkg.com/@stardust-ui/fela-dom/-/fela-dom-10.6.2.tgz#6aa9a98aac518b604a7e2a697256d817f1e68a76"
-  dependencies:
-    css-in-js-utils "^3.0.0"
-    fast-loops "^1.0.1"
-    fela-utils "^10.5.0"
-
-"@stardust-ui/fela-tools@^10.6.2":
-  version "10.6.2"
-  resolved "https://registry.yarnpkg.com/@stardust-ui/fela-tools/-/fela-tools-10.6.2.tgz#ef91b44b4ba36c6b0c5022141eef85f836c87825"
-  dependencies:
-    "@stardust-ui/fela" "^10.6.1"
-    css-in-js-utils "^3.0.0"
-    fast-loops "^1.0.0"
-    fela-utils "^10.5.0"
-
-"@stardust-ui/fela@^10.6.1":
-  version "10.6.1"
-  resolved "https://registry.yarnpkg.com/@stardust-ui/fela/-/fela-10.6.1.tgz#bb96a30a25d14c7f797b8a5db13811464de09a9a"
-  dependencies:
-    css-in-js-utils "^3.0.0"
-    csstype "^2.5.5"
-    fast-loops "^1.0.0"
-    fela-utils "^10.5.0"
-    isobject "^3.0.1"
-
-"@stardust-ui/react-component-event-listener@^0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@stardust-ui/react-component-event-listener/-/react-component-event-listener-0.36.0.tgz#fc07a32c4295629cb0a69bb080de5c86e2774e1a"
+"@stardust-ui/react-component-event-listener@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.yarnpkg.com/@stardust-ui/react-component-event-listener/-/react-component-event-listener-0.38.0.tgz#1787faded94b40ad41226e6289baf13e701c6e7f"
   dependencies:
     "@babel/runtime" "^7.1.2"
-    prop-types "^15.6.1"
+    prop-types "^15.7.2"
 
-"@stardust-ui/react-component-nesting-registry@^0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@stardust-ui/react-component-nesting-registry/-/react-component-nesting-registry-0.36.0.tgz#fec0d495e63de76635d2014dddc3b93abc11051c"
+"@stardust-ui/react-component-nesting-registry@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.yarnpkg.com/@stardust-ui/react-component-nesting-registry/-/react-component-nesting-registry-0.38.0.tgz#5f66fb3fdc201b8767960db77f3b0bcd5e103698"
   dependencies:
     "@babel/runtime" "^7.1.2"
-    prop-types "^15.6.1"
+    prop-types "^15.7.2"
 
-"@stardust-ui/react-component-ref@^0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@stardust-ui/react-component-ref/-/react-component-ref-0.36.0.tgz#3002fac62386b428ffc4867a21ccd80538751840"
+"@stardust-ui/react-component-ref@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.yarnpkg.com/@stardust-ui/react-component-ref/-/react-component-ref-0.38.0.tgz#52d555f2d5edd213c923c93a106f7de940e427ef"
   dependencies:
     "@babel/runtime" "^7.1.2"
-    "@stardust-ui/react-proptypes" "^0.36.0"
-    prop-types "^15.6.1"
+    prop-types "^15.7.2"
     react-is "^16.6.3"
 
-"@stardust-ui/react-fela@^10.6.2":
-  version "10.6.2"
-  resolved "https://registry.yarnpkg.com/@stardust-ui/react-fela/-/react-fela-10.6.2.tgz#e282f632c9a16eaceb244d1bb144f6b733db665f"
-  dependencies:
-    "@stardust-ui/fela-bindings" "^10.6.2"
-    "@stardust-ui/fela-dom" "^10.6.2"
-    prop-types "^15.5.8"
-
-"@stardust-ui/react-proptypes@^0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@stardust-ui/react-proptypes/-/react-proptypes-0.36.0.tgz#5b0f986b9d99f014d7e9ebaf25669c55e64f401d"
+"@stardust-ui/react-proptypes@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.yarnpkg.com/@stardust-ui/react-proptypes/-/react-proptypes-0.38.0.tgz#ec06ded0721dd5cf51e336be01b87da63e0fba47"
   dependencies:
     "@babel/runtime" "^7.1.2"
-    lodash "^4.17.11"
-    prop-types "^15.6.1"
+    lodash "^4.17.15"
+    prop-types "^15.7.2"
 
-"@stardust-ui/react@^0.36.1":
-  version "0.36.1"
-  resolved "https://registry.yarnpkg.com/@stardust-ui/react/-/react-0.36.1.tgz#1c75669cbb9ec6e8a92b3fa5ecdf4fab5e850391"
+"@stardust-ui/react@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.yarnpkg.com/@stardust-ui/react/-/react-0.38.0.tgz#0cdddeeaab5fe1093b15789550f204bd7c9fe298"
   dependencies:
     "@babel/runtime" "^7.1.2"
-    "@stardust-ui/fela" "^10.6.1"
-    "@stardust-ui/react-component-event-listener" "^0.36.0"
-    "@stardust-ui/react-component-nesting-registry" "^0.36.0"
-    "@stardust-ui/react-component-ref" "^0.36.0"
-    "@stardust-ui/react-fela" "^10.6.2"
-    "@stardust-ui/react-proptypes" "^0.36.0"
+    "@stardust-ui/react-component-event-listener" "^0.38.0"
+    "@stardust-ui/react-component-nesting-registry" "^0.38.0"
+    "@stardust-ui/react-component-ref" "^0.38.0"
+    "@stardust-ui/react-proptypes" "^0.38.0"
     classnames "^2.2.5"
     downshift "^3.2.10"
     fast-memoize "^2.5.1"
-    fela-plugin-embedded "^10.5.0"
-    fela-plugin-fallback-value "^10.5.0"
-    fela-plugin-placeholder-prefixer "^10.5.0"
-    fela-plugin-prefixer "^10.5.0"
-    fela-plugin-rtl "^10.5.0"
+    fela "^10.6.1"
+    fela-plugin-embedded "^10.6.1"
+    fela-plugin-fallback-value "^10.6.1"
+    fela-plugin-placeholder-prefixer "^10.6.1"
+    fela-plugin-prefixer "^10.6.1"
+    fela-plugin-rtl "^10.6.1"
     keyboard-key "^1.0.1"
-    lodash "^4.17.11"
+    lodash "^4.17.15"
     popper.js "^1.15.0"
-    prop-types "^15.6.1"
+    prop-types "^15.7.2"
+    react-fela "^10.6.1"
     react-is "^16.6.3"
+    react-resize-detector "^4.2.0"
 
 "@types/babel__core@^7.1.0":
   version "7.1.1"
@@ -2121,13 +2080,15 @@ domexception@^1.0.1:
     webidl-conversions "^4.0.2"
 
 downshift@^3.2.10:
-  version "3.2.12"
-  resolved "https://registry.yarnpkg.com/downshift/-/downshift-3.2.12.tgz#19dc3b38e2d070c814f25d67d3a430e1bd25cf74"
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/downshift/-/downshift-3.3.1.tgz#429ce98be43115664d2ea54f841d80059007b883"
   dependencies:
     "@babel/runtime" "^7.4.5"
+    "@reach/auto-id" "^0.2.0"
     compute-scroll-into-view "^1.0.9"
+    keyboard-key "1.0.4"
     prop-types "^15.7.2"
-    react-is "^16.8.6"
+    react-is "^16.9.0"
 
 duplexer@^0.1.1:
   version "0.1.1"
@@ -2391,8 +2352,8 @@ fast-levenshtein@~2.0.4:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
 fast-loops@^1.0.0, fast-loops@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/fast-loops/-/fast-loops-1.0.1.tgz#a3d33e71654a7e6e67d7c2de0fee4ea11c6f2526"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/fast-loops/-/fast-loops-1.1.1.tgz#4ada5dd07f8dcb2ff659fdc5bae2725f25c992b2"
 
 fast-memoize@^2.5.1:
   version "2.5.1"
@@ -2416,6 +2377,24 @@ fbjs@^0.8.0, fbjs@^0.8.4:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.18"
 
+fela-bindings@^10.6.1:
+  version "10.6.1"
+  resolved "https://registry.yarnpkg.com/fela-bindings/-/fela-bindings-10.6.1.tgz#7658915178ec903f8e86d608ffd22f1ca3fca232"
+  dependencies:
+    fast-loops "^1.0.0"
+    fela-dom "^10.6.1"
+    fela-tools "^10.6.1"
+    react-addons-shallow-compare "^15.6.2"
+    shallow-equal "^1.0.0"
+
+fela-dom@^10.6.1:
+  version "10.6.1"
+  resolved "https://registry.yarnpkg.com/fela-dom/-/fela-dom-10.6.1.tgz#d249a4380ab1565e73e250fe624a36329fd256a7"
+  dependencies:
+    css-in-js-utils "^3.0.0"
+    fast-loops "^1.0.1"
+    fela-utils "^10.6.1"
+
 fela-plugin-custom-property@^10.6.1:
   version "10.6.1"
   resolved "https://registry.yarnpkg.com/fela-plugin-custom-property/-/fela-plugin-custom-property-10.6.1.tgz#3a2d06ac4e509a7ea0335b3b959850ad5f3eede1"
@@ -2423,28 +2402,28 @@ fela-plugin-custom-property@^10.6.1:
     css-in-js-utils "^3.0.0"
     isobject "^3.0.1"
 
-fela-plugin-embedded@^10.5.0:
+fela-plugin-embedded@^10.6.1:
   version "10.6.1"
   resolved "https://registry.yarnpkg.com/fela-plugin-embedded/-/fela-plugin-embedded-10.6.1.tgz#a16bc2d306df9f5030644c296977502b13b25f9e"
   dependencies:
     fast-loops "^1.0.0"
     isobject "^3.0.1"
 
-fela-plugin-fallback-value@^10.5.0, fela-plugin-fallback-value@^10.6.1:
+fela-plugin-fallback-value@^10.6.1:
   version "10.6.1"
   resolved "https://registry.yarnpkg.com/fela-plugin-fallback-value/-/fela-plugin-fallback-value-10.6.1.tgz#124da673e7ba4b8d59bdd83ae6d904160c131497"
   dependencies:
     css-in-js-utils "^3.0.0"
     isobject "^3.0.1"
 
-fela-plugin-placeholder-prefixer@^10.5.0:
+fela-plugin-placeholder-prefixer@^10.6.1:
   version "10.6.1"
   resolved "https://registry.yarnpkg.com/fela-plugin-placeholder-prefixer/-/fela-plugin-placeholder-prefixer-10.6.1.tgz#c55b27cb32c61eefeee660ebcac39c64c0de1d6b"
   dependencies:
     fast-loops "^1.0.0"
     fela-plugin-custom-property "^10.6.1"
 
-fela-plugin-prefixer@^10.5.0:
+fela-plugin-prefixer@^10.6.1:
   version "10.6.1"
   resolved "https://registry.yarnpkg.com/fela-plugin-prefixer/-/fela-plugin-prefixer-10.6.1.tgz#a13c358446ac563520672f277fa0273380bf6713"
   dependencies:
@@ -2454,18 +2433,37 @@ fela-plugin-prefixer@^10.5.0:
     inline-style-prefixer "^5.1.0"
     isobject "^3.0.1"
 
-fela-plugin-rtl@^10.5.0:
+fela-plugin-rtl@^10.6.1:
   version "10.6.1"
   resolved "https://registry.yarnpkg.com/fela-plugin-rtl/-/fela-plugin-rtl-10.6.1.tgz#67110d80973dddfc08af63ea9431e6b58921964c"
   dependencies:
     rtl-css-js "^1.1.3"
 
-fela-utils@^10.5.0:
+fela-tools@^10.6.1:
+  version "10.6.1"
+  resolved "https://registry.yarnpkg.com/fela-tools/-/fela-tools-10.6.1.tgz#77306a79ede0defc518c4617bba5c932d81808e0"
+  dependencies:
+    css-in-js-utils "^3.0.0"
+    fast-loops "^1.0.0"
+    fela "^10.6.1"
+    fela-utils "^10.6.1"
+
+fela-utils@^10.6.1:
   version "10.6.1"
   resolved "https://registry.yarnpkg.com/fela-utils/-/fela-utils-10.6.1.tgz#cbb58d94c32dddc0a561f28e67174f3b9ae27700"
   dependencies:
     css-in-js-utils "^3.0.0"
     fast-loops "^1.0.0"
+
+fela@^10.6.1:
+  version "10.6.1"
+  resolved "https://registry.yarnpkg.com/fela/-/fela-10.6.1.tgz#66a8349018a5c06908deca7fc18a83b0df9d63a6"
+  dependencies:
+    css-in-js-utils "^3.0.0"
+    csstype "^2.5.5"
+    fast-loops "^1.0.0"
+    fela-utils "^10.6.1"
+    isobject "^3.0.1"
 
 figgy-pudding@^3.5.1:
   version "3.5.1"
@@ -3602,7 +3600,7 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-keyboard-key@^1.0.1:
+keyboard-key@1.0.4, keyboard-key@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/keyboard-key/-/keyboard-key-1.0.4.tgz#52d8fa07b7e17757072aa22a67fb4ae85e4c46b0"
 
@@ -3696,7 +3694,7 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lodash-es@^4.17.14:
+lodash-es@^4.17.11, lodash-es@^4.17.14:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
 
@@ -3704,11 +3702,7 @@ lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
 
-lodash@^4.17.11:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-
-lodash@^4.17.13, lodash@^4.17.14:
+lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
 
@@ -4606,6 +4600,10 @@ querystring@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
+raf-schd@^4.0.0:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/raf-schd/-/raf-schd-4.0.2.tgz#bd44c708188f2e84c810bf55fcea9231bcaed8a0"
+
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
@@ -4648,13 +4646,31 @@ react-fast-compare@^2.0.1:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
 
-react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.6:
+react-fela@^10.6.1:
+  version "10.6.1"
+  resolved "https://registry.yarnpkg.com/react-fela/-/react-fela-10.6.1.tgz#7d76246d073d93eefc08084345e81193a1e510c6"
+  dependencies:
+    fela-bindings "^10.6.1"
+    fela-dom "^10.6.1"
+    prop-types "^15.5.8"
+
+react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
 
-react-is@^16.8.1, react-is@^16.8.4:
+react-is@^16.8.4:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
+
+react-resize-detector@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/react-resize-detector/-/react-resize-detector-4.2.0.tgz#b87aee6b37c9e8a52daca8736b3230cf6a2a8647"
+  dependencies:
+    lodash "^4.17.11"
+    lodash-es "^4.17.11"
+    prop-types "^15.7.2"
+    raf-schd "^4.0.0"
+    resize-observer-polyfill "^1.5.1"
 
 react@^16.9.0:
   version "16.9.0"
@@ -4725,8 +4741,8 @@ regenerate@^1.4.0:
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
 
 regenerator-runtime@^0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.2.tgz#32e59c9a6fb9b1a4aff09b4930ca2d4477343447"
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
 
 regenerator-transform@^0.14.0:
   version "0.14.1"
@@ -4828,6 +4844,10 @@ require-main-filename@^1.0.1:
 require-main-filename@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-2.0.0.tgz#d0b329ecc7cc0f61649f62215be69af54aa8989b"
+
+resize-observer-polyfill@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
@@ -4988,8 +5008,8 @@ rsvp@^4.8.4:
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.4.tgz#b50e6b34583f3dd89329a2f23a8a2be072845911"
 
 rtl-css-js@^1.1.3:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/rtl-css-js/-/rtl-css-js-1.13.0.tgz#e97ebb67dd9fc6c4be1278730901967fc432ed9f"
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/rtl-css-js/-/rtl-css-js-1.13.1.tgz#80deabf6e8f36d6767d495cd3eb60fecb20c67e1"
   dependencies:
     "@babel/runtime" "^7.1.2"
 
