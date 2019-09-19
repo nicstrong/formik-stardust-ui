@@ -19,7 +19,7 @@ export const FormikInputFormField: React.FC<FormikInputFieldProps> = props => {
           <Input
             onChange={(
               event: React.SyntheticEvent<HTMLElement>,
-              data?: InputProps & { value: string }
+              data?: InputProps & { value: any }
             ) => {
               setFieldValue(form, field.name, data ? data.value : undefined);
               onChange && onChange(event, data);
