@@ -1,11 +1,11 @@
-Wrappers for using [Formik](https://github.com/jaredpalmer/formik) with [Stardust UI React ](https://reactstrap.github.io/react).
+Sample react app to test showcase all the form controls.
 
-## Introduction
+To test locally without installing from NPM:
 
-Combine a Form.Field and control in a single control managed by Formik.
-
-Wrappers exist so far for:
-
-- [Input](https://stardust-ui.github.io/react/components/input) - FormikInputFormField
-- [Checkbox](https://stardust-ui.github.io/react/components/checkbox) - FormikCheckboxFormField
-- [Dropdown](https://stardust-ui.github.io/react/components/ropdown) - FormikDropdownFormField
+```
+cd formik-stardust-ui
+npm install build pack
+cd example
+npm install ..\formik-stardust-ui-X.Y.Z.tgz
+npm start
+```
