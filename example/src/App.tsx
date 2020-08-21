@@ -1,14 +1,14 @@
-import { Button, Flex, Form } from '@stardust-ui/react';
-import { Formik } from 'formik';
+import { Button, Flex, Form } from '@fluentui/react-northstar'
+import { Formik } from 'formik'
 import {
   FormikCheckboxFormField,
   FormikDropdownFormField,
   FormikInputFormField,
   FormikRadioGroupFormField,
-} from 'formik-stardust-ui';
-import React from 'react';
-import * as Yup from 'yup';
-import { Debug } from './Debug';
+} from 'formik-stardust-ui'
+import React from 'react'
+import * as Yup from 'yup'
+import { Debug } from './Debug'
 
 const App: React.FC = () => {
   const FormSchema = Yup.object().shape({
@@ -17,36 +17,35 @@ const App: React.FC = () => {
       .max(50, 'Too Long!')
       .required('Required'),
     number_field: Yup.number()
-      .min(0, 'Greater than zero')
+      .min(0, 'Greater than or equal to zero')
       .max(10, 'Less than 10')
       .required('Required'),
-  });
+  })
 
   return (
     <Flex styles={{ padding: '1rem', width: '600px' }}>
       <Formik
         initialValues={{
           string_field: '',
-          number_field: 5,
+          number_field: 6,
           checkbox_field: false,
-          dropdown_field: 'Red',
-          radiogroup_field: 'Bar',
+          dropdown_field: 'Blue',
+          radiogroup_field: 'Foo',
         }}
         validationSchema={FormSchema}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
+            alert(JSON.stringify(values, null, 2))
+            setSubmitting(false)
+          }, 400)
         }}
       >
-        {renderProps => {
-          const { handleSubmit, handleReset } = renderProps;
+        {(formik) => {
           return (
             <Form
-              onSubmit={(e: React.SyntheticEvent<HTMLElement, Event>) => {
-                handleSubmit(e as React.SyntheticEvent<HTMLFormElement, Event>);
-              }}
+              onSubmit={(e) =>
+                formik.handleSubmit(e as React.FormEvent<HTMLFormElement>)
+              }
             >
               <Flex gap="gap.medium" fill column>
                 <FormikInputFormField
@@ -64,12 +63,13 @@ const App: React.FC = () => {
                   label="Dropdown Field"
                   name="dropdown_field"
                   placeholder="Choose your colour"
+                  checkable
                   items={['Red', 'Green', 'Blue']}
                 />
                 <FormikRadioGroupFormField
                   label="Radio Group Field"
                   name="radiogroup_field"
-                  items={['Foo', 'Bar'].map(i => ({
+                  items={['Foo', 'Bar'].map((i) => ({
                     key: i,
                     value: i,
                     name: i,
@@ -78,7 +78,6 @@ const App: React.FC = () => {
                   }))}
                 />
                 <FormikCheckboxFormField
-                  inline
                   label="Checkbox Field"
                   name="checkbox_field"
                 />
@@ -86,7 +85,7 @@ const App: React.FC = () => {
                   <Form.Field
                     control={{
                       as: Button,
-                      onClick: handleReset,
+                      onClick: formik.handleReset,
                       content: 'Cancel',
                     }}
                   />
@@ -103,11 +102,11 @@ const App: React.FC = () => {
                 </Flex.Item>
               </Flex>
             </Form>
-          );
+          )
         }}
       </Formik>
     </Flex>
-  );
-};
+  )
+}
 
-export default App;
+export default App

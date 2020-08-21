@@ -1,19 +1,22 @@
-import { Form, RadioGroup, RadioGroupProps } from '@fluentui/react-northstar';
-import { useField } from 'formik';
-import React from 'react';
+import { Form, RadioGroup, RadioGroupProps } from '@fluentui/react-northstar'
+import { useField } from 'formik'
+import React from 'react'
 
 type FormikRadioGroupFieldProps = Omit<RadioGroupProps, 'name'> & {
-  label: string;
-  name: string;
-};
+  label: string
+  name: string
+}
 
-export const FormikRadioGroupFormField: React.FC<
-  FormikRadioGroupFieldProps
-> = ({ label, ...props }) => {
-  const [field, metadata] = useField(props);
+export const FormikRadioGroupFormField: React.FC<FormikRadioGroupFieldProps> = ({
+  label,
+  ...props
+}) => {
+  const [{ onBlur, ...field }, metadata, { setValue, setTouched }] = useField(
+    props
+  )
 
-  const isError = metadata.touched && metadata.error !== undefined;
-  const id = props.name;
+  const isError = metadata.touched && metadata.error !== undefined
+  const id = props.name
 
   return (
     <Form.Field>
@@ -21,7 +24,10 @@ export const FormikRadioGroupFormField: React.FC<
         {label}
       </Form.Label>
       <RadioGroup
+        id={id}
         defaultCheckedValue={metadata.initialValue}
+        onCheckedValueChange={(_e, props) => setValue(props?.value)}
+        onBlur={() => setTouched(true)}
         {...field}
         {...props}
       />
@@ -31,5 +37,5 @@ export const FormikRadioGroupFormField: React.FC<
         </Form.Message>
       )}
     </Form.Field>
-  );
-};
+  )
+}

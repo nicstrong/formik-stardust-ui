@@ -26,8 +26,8 @@
     "format": "prettier --trailing-comma es5 --single-quote --write 'src/**/*' 'test/**/*' 'README.md'"
   },
   "peerDependencies": {
-    "@stardust-ui/react": "> 0.36.0 < 1",
-    "formik": ">= 1.5.0 < 2",
+    "@fluentui/react-northstar": "> 0.51.0 < 1",
+    "formik": ">= 2.0.0 < 3",
     "react": ">= 16.8.0 < 17",
     "react-dom": ">= 16.8.0 < 17"
   },
@@ -36,9 +36,9 @@
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
     "formik": "^2.1.5",
-    "husky": "^3.0.3",
-    "prettier": "^1.18.2",
-    "pretty-quick": "^1.11.1",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^3.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "tsdx": "^0.13.2",
@@ -52,7 +52,7 @@
   },
   "prettier": {
     "printWidth": 80,
-    "semi": true,
+    "semi": false,
     "singleQuote": true,
     "trailingComma": "es5"
   },

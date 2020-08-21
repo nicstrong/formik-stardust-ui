@@ -1,6 +1,6 @@
-import { Segment } from '@stardust-ui/react';
-import { FormikConsumer } from 'formik';
-import React from 'react';
+import { Segment } from '@fluentui/react-northstar'
+import { FormikConsumer } from 'formik'
+import React from 'react'
 
 export const Debug = () => (
   <Segment
@@ -41,4 +41,4 @@ export const Debug = () => (
       )}
     </FormikConsumer>
   </Segment>
-);
+)
