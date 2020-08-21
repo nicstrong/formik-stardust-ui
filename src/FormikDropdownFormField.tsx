@@ -1,36 +1,39 @@
-import { Dropdown, DropdownProps } from '@stardust-ui/react';
+import { Dropdown, DropdownProps, Form } from '@fluentui/react-northstar';
+import { useField } from 'formik';
 import React from 'react';
-import {
-  FormikFormField,
-  FormikFormFieldControlProps,
-  RenderPropTypes,
-} from './FormikFormField';
-import { setFieldValue } from './setFieldValue';
 
-type FormikDropdownFieldProps = FormikFormFieldControlProps<DropdownProps>;
-
-export const FormikDropdownFormField: React.FC<
-  FormikDropdownFieldProps
-> = props => {
-  return (
-    <FormikFormField
-      render={(props: RenderPropTypes<DropdownProps>) => {
-        const { field, form, defaultValue, ...dropdownRest } = props;
-        return (
-          <Dropdown
-            onSelectedChange={(
-              _event: React.SyntheticEvent<HTMLElement>,
-              data?: DropdownProps
-            ): void => {
-              setFieldValue(form, field.name, data ? data.value : undefined);
-            }}
-            value={field.value}
-            onBlur={field.onBlur}
-            {...dropdownRest}
-          />
-        );
-      }}
-      {...props}
-    />
-  );
+type FormikDropdownFieldProps = Omit<DropdownProps, 'name' | 'onChange'> & {
+  label: string;
+  name: string;
 };
+
+export function FormikDropdownFormField({
+  label,
+  name,
+  ...props
+}: FormikDropdownFieldProps) {
+  const [, metadata, { setValue, setTouched }] = useField(name);
+
+  const isError = metadata.touched && metadata.error !== undefined;
+
+  return (
+    <Form.Field>
+      <Form.Label htmlFor={name} id={`${name}-label`}>
+        {label}
+      </Form.Label>
+
+      <Dropdown
+        defaultValue={metadata.initialValue}
+        onChange={(_e, d) => d.value && setValue(d.value)}
+        onBlur={_e => setTouched(true)}
+        {...props}
+      />
+
+      {isError && (
+        <Form.Message id={`${name}message`} role="alert" error={isError}>
+          {metadata.error}
+        </Form.Message>
+      )}
+    </Form.Field>
+  );
+}
