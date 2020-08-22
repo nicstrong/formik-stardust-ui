@@ -1,34 +1,31 @@
-Wrappers for using [Formik](https://github.com/jaredpalmer/formik) with [Stardust UI React ](https://reactstrap.github.io/react).
+Wrappers for using [Formik](https://github.com/jaredpalmer/formik) with [Fluent UI - React Northstar](https://github.com/microsoft/fluentui/tree/master/packages/fluentui).
 
 ## Introduction
 
-Combine a Form.Field and control in a single control managed by Formik.
+Combine a `Form.Field` and control in a single control managed by Formik.
 
 Wrappers exist so far for:
 
-- [Input](https://stardust-ui.github.io/react/components/input) - FormikInputFormField
-- [Checkbox](https://stardust-ui.github.io/react/components/checkbox) - FormikCheckboxFormField
-- [Dropdown](https://stardust-ui.github.io/react/components/dropdown) - FormikDropdownFormField
+- [Input](https://fluentsite.z22.web.core.windows.net/components/input/definition) - FormikInputFormField
+- [Checkbox](https://fluentsite.z22.web.core.windows.net/components/checkbox/definition) - FormikCheckboxFormField
+- [Dropdown](https://fluentsite.z22.web.core.windows.net/components/dropdown/definition) - FormikDropdownFormField
+- [RadioGroup](https://fluentsite.z22.web.core.windows.net/components/radio-group/definition) - FormikRadioGroupFieldProps
+
+There is also `FormikInputFormField` for file upload but that is not a React Northstar control.
 
 ## Example
 
 ```jsx
-import { Button, Flex, Form } from '@stardust-ui/react';
+import { Button, Flex, Form } from '@fluentui/react-northstar';
 import { Formik } from 'formik';
 import { FormikCheckboxFormField, FormikDropdownFormField, FormikInputFormField } from 'formik-stardust-ui';
 import React from 'react';
 
  <Flex styles={{ padding: '1rem', width: '600px' }}>
       <Formik initialValues={{ firstname: '', lastname: '', conditions: false, colour: 'Red' }}>
-        {renderProps => {
-          const {
-            handleSubmit
-          } = renderProps;
-          return <Form onSubmit={
-            (e: React.SyntheticEvent<HTMLElement, Event>) => {
-              handleSubmit(e as React.SyntheticEvent<HTMLFormElement, Event>)
-            }}>
-
+        {(formik) => {
+          return (
+            <Form  onSubmit={(e) => formik.handleSubmit(e as React.FormEvent<HTMLFormElement>)} >
             <Flex gap='gap.medium' fill column>
               <FormikInputFormField fluid label="First name" name="firstname" />
               <FormikInputFormField fluid label="Last name" name="lastname" />
@@ -49,7 +46,7 @@ import React from 'react';
               </Flex>
             </Flex>
           </Form>
-        }}
+        )}}
       </Formik>
     </Flex>
 ```
