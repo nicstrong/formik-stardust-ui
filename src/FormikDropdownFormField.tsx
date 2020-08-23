@@ -1,20 +1,20 @@
-import { Dropdown, DropdownProps, Form } from '@fluentui/react-northstar';
-import { useField } from 'formik';
-import React from 'react';
+import { Dropdown, DropdownProps, Form } from '@fluentui/react-northstar'
+import { useField } from 'formik'
+import React from 'react'
 
 type FormikDropdownFieldProps = Omit<DropdownProps, 'name' | 'onChange'> & {
-  label: string;
-  name: string;
-};
+  label: string
+  name: string
+}
 
 export function FormikDropdownFormField({
   label,
   name,
   ...props
 }: FormikDropdownFieldProps) {
-  const [, metadata, { setValue, setTouched }] = useField(name);
+  const [field, metadata, { setValue, setTouched }] = useField(name)
 
-  const isError = metadata.touched && metadata.error !== undefined;
+  const isError = metadata.touched && metadata.error !== undefined
 
   return (
     <Form.Field>
@@ -26,6 +26,7 @@ export function FormikDropdownFormField({
         defaultValue={metadata.initialValue}
         onChange={(_e, d) => d.value && setValue(d.value)}
         onBlur={_e => setTouched(true)}
+        value={field.value}
         {...props}
       />
 
@@ -35,5 +36,5 @@ export function FormikDropdownFormField({
         </Form.Message>
       )}
     </Form.Field>
-  );
+  )
 }

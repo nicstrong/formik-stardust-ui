@@ -31,6 +31,7 @@ const App: React.FC = () => {
           checkbox_field: false,
           dropdown_field: 'Blue',
           radiogroup_field: 'Foo',
+          multi_dropdown_field: ['red', 'violet'],
         }}
         validationSchema={FormSchema}
         onSubmit={(values, { setSubmitting }) => {
@@ -40,10 +41,10 @@ const App: React.FC = () => {
           }, 400)
         }}
       >
-        {(formik) => {
+        {formik => {
           return (
             <Form
-              onSubmit={(e) =>
+              onSubmit={e =>
                 formik.handleSubmit(e as React.FormEvent<HTMLFormElement>)
               }
             >
@@ -69,7 +70,7 @@ const App: React.FC = () => {
                 <FormikRadioGroupFormField
                   label="Radio Group Field"
                   name="radiogroup_field"
-                  items={['Foo', 'Bar'].map((i) => ({
+                  items={['Foo', 'Bar'].map(i => ({
                     key: i,
                     value: i,
                     name: i,
@@ -81,6 +82,23 @@ const App: React.FC = () => {
                   label="Checkbox Field"
                   name="checkbox_field"
                 />
+                <FormikDropdownFormField
+                  multiple
+                  fluid={true}
+                  label="Choose colour"
+                  items={[
+                    'red',
+                    'green',
+                    'blue',
+                    'orange',
+                    'yellow',
+                    'indigo',
+                    'violet',
+                  ]}
+                  name="multi_dropdown_field"
+                  placeholder="Select colour"
+                />
+
                 <Flex gap="gap.smaller" hAlign="end">
                   <Form.Field
                     control={{

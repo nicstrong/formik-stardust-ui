@@ -9,7 +9,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/yup": "^0.29.6",
     "formik": "^2.1.5",
-    "formik-stardust-ui": "file:../formik-stardust-ui-0.3.0.tgz",
+    "formik-stardust-ui": "file:../formik-stardust-ui-0.3.2.tgz",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.3",
